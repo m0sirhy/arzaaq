@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc." />
 
-    //meta Robots
+    <!-- //meta Robots -->
   <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
-//canonical tag :A page can have several different URLs depending
+<!-- //canonical tag :A page can have several different URLs depending -->
 <link rel="canonical" href="" />
 
 
-//og: meta Tags
+<!-- //og: meta Tags -->
 <meta property="og:title" content="" />
 <meta property="og:site_name" content="" />
 <meta property="og:type" content="article" />
@@ -22,10 +22,9 @@
 <meta property="og:description" 
   content="Sean Connery found fame and fortune as the
            suave, sophisticated British agent, James Bond." />
-************
 
 
-//twitter card
+<!-- //twitter card -->
  <meta name=”twitter:card” content=”summary_large_image”>
  <meta name=”twitter:url” content=” “>
 <meta name=”twitter:title” content=” ”>

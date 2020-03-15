@@ -22,7 +22,7 @@
     <link href="{{asset('land/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('land/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
     <link href="{{asset('land/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
-    <link href="{{asset('land/vendor/owl.carousel/assets/owl.carousel.min.cssmm')}}" rel="stylesheet">
+    <link href="{{asset('land/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
     <link href="{{asset('land/vendor/venobox/venobox.css')}}" rel="stylesheet">
     <link href="{{asset('land/vendor/aos/aos.css')}}" rel="stylesheet">
 

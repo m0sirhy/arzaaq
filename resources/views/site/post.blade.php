@@ -2,19 +2,28 @@
 @extends('layouts.site.app')
 @section('content')
     {{-- Header --}}
+    <br>
+    <div class="float-left">
+      <button type="button" class="btn btn-primary ">عودة  للرئيسية</button>
+  
+    </div>
 <div class="header mt-md-5">
+  
     <div class="header-body">
   
       <!-- Pretitle -->
       <h6 class="header-pretitle">
-        Our Platform
+موقع الوظائف والفرص الشبابي الاول 
       </h6>
   
       <!-- Title -->
-      <h1 class="header-title">
-        Platform Feed
-      </h1>
-  
+      <h1 class="header-title" style="font-family: 'Cairo';   ">
+
+<b>        أرزاق
+</b>      </h1>
+    
+
+
     </div>
   </div> 
 
@@ -72,24 +81,20 @@
                     <div class="col">
 
                       <!-- Reaction -->
-                      <a href="#!" class="btn btn-sm btn-white">
+                      <a href="#!" class="btn btn-outline-secondary btn-white">
                         😬 1
                       </a>
-                      <a href="#!" class="btn btn-sm btn-white">
+                      <a href="#!" class="btn btn-outline-success  btn-white">
                         👍 2
                       </a>
-                      <a href="#!" class="btn btn-sm btn-white">
-                        Add Reaction
-                      </a>
-
+                  
                     </div>
                  
                     <div class="col-auto">
 
                       <!-- Button -->
-                      <a href="#!" class="btn btn-sm btn-white">
-                        Share
-                      </a>
+                      <a href="#!" class="btn  btn-success">
+مشاركة                      </a>
 
                     </div>
                   </div> <!-- / .row -->

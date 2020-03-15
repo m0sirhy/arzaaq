@@ -38,12 +38,14 @@ to thousands of webmasters begging for links. “>
     <link rel="stylesheet" href="{{ asset('site/assets/libs/quill/dist/quill.core.css')}}" />
     <link rel="stylesheet" href="{{ asset('site/assets/libs/highlightjs/styles/vs2015.css')}}" />
 
+    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
 
     <!-- Theme CSS -->
 
-    <link rel="stylesheet" href="{{ asset('site/assets/css/theme.min.css')}}" id="stylesheetLight">
-    <link rel="stylesheet" href="{{ asset('site/assets/css/theme-dark.min.css')}}" id="stylesheetDark">
-
+    <link rel="stylesheet" on="isDay" href="{{ asset('site/assets/css/theme.min.css')}}" id="stylesheetLight">
+    <!-- <link rel="stylesheet" href="{{ asset('site/assets/css/theme-dark.min.css')}}" id="stylesheetDark"> -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
     <style>
       body {
         display: none;
@@ -85,12 +87,17 @@ to thousands of webmasters begging for links. “>
     <script src="{{ asset('site/assets/libs/select2/dist/js/select2.full.min.js')}}"></script>
     <script src="{{ asset('site/assets/libs/chart.js/Chart.extension.js')}}"></script>
 
-    <!-- Map -->
-    <script src='../api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    
 
     <!-- Theme JS -->
     <script src="{{ asset('site/assets/js/theme.min.js')}}"></script>
 
+    <script>
+  function isDay() {
+  const hours = (new Date()).getHours();
+  return (hours >= 6 && hours < 18);
+}
+      </script>
 
   </body>
 

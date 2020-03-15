@@ -43,10 +43,13 @@
                 </div>
                 </nav>
  <div class="main-content">
+  @include('partials._erorrs')
+
       
               <div class="container-fluid">
-			  
-			  @yield('content')
+
+        @yield('content')
+
      
 </div>
   <!-- JAVASCRIPT
@@ -67,7 +70,7 @@
     <script src="{{ asset('site/assets/libs/quill/dist/quill.min.js')}}"></script>
     <script src="{{ asset('site/assets/libs/select2/dist/js/select2.full.min.js')}}"></script>
     <script src="{{ asset('site/assets/libs/chart.js/Chart.extension.js')}}"></script>
-   
+    <script src="{{ asset('site/assets/libs/image_preview.js') }}"></script>
     <!-- Map -->
     <script src='../api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 
@@ -81,6 +84,7 @@
 
   
 </script>
+
     
   </body>
 

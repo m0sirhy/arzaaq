@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -11,10 +12,12 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-        return view('site.index');
+        $posts=Post::with('category')->paginate(9);
+      
+        return view('site.posts',compact('posts'));
     }
 
     /**
@@ -44,10 +47,10 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Post $post)
     {
         //
-        return view('site.post');
+        return view('site.post',compact('post'));
     }
 
     /**

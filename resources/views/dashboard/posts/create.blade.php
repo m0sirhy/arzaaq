@@ -70,15 +70,12 @@
         <label>
           Post Category
         </label>
-
-        <select class="form-control" data-toggle="select" data-options='{"minimum-results-for-search": -1}'>
-          @foreach ($categories as $category )
-          <option data-avatar-src="{{$category->image_path}}">
-            {{$category->name}}
-          </option>
-          @endforeach
-
-        </select>
+        <select name="category_id" class="form-control">
+                                <option value="">@lang('site.all_categories')</option>
+                                @foreach ($categories as $category)
+                                    <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
+                                @endforeach
+                            </select>
 
       </div>
 
@@ -110,6 +107,9 @@
           </div>
         </div>
 
+        <div class="form-group">
+                            <img src="{{ asset('uploads/product_images/default.png') }}" style="width: 100px" class="img-thumbnail image-preview" alt="">
+                        </div>
 
 
       </div>
@@ -118,9 +118,6 @@
   <hr class="mt-5 mb-5">
 
  
-
-  <!-- Divider -->
-  <hr class="mt-5 mb-5">
 
   <!-- Buttons -->
   <input type="submit" class="btn btn-block btn-primary" value=" Create project ">

@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Dashboard;
 
+use App\Category;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use Image;
 class CategoryController extends Controller
 {
     /**
@@ -37,6 +38,17 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         //
+        $request_data = $request->except('image');
+
+        if ($request->image) {
+            Image::make($request->image)->save(public_path('uploads/category_images/' . $request->image->hashName()));
+
+            $request_data['image'] = $request->image->hashName();
+        } 
+
+      Category::create($request_data);
+         session()->flash('success', __('site.added_successfully'));
+          return redirect()->route('dashboard.categories.create');
     }
 
     /**

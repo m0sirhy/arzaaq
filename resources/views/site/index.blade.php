@@ -1,224 +1,237 @@
-@extends('layouts.site.app')
-@section('content')
-{{-- Header --}}
-<div class="header mt-md-5">
-  <div class="header-body">
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
 
-    <!-- Pretitle -->
-    <h6 class="header-pretitle">
-      Our Platform
-    </h6>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <!-- Title -->
-    <h1 class="header-title">
-      Platform Feed
-    </h1>
+    <title>ارزاق -موقع الوظائف الاول </title>
+    <meta name="description" content="صحيفة الكترونية مهتمة بالشأن الفلسطيني والعربي ، تضم عدة أقسام متنوعة تتناول الشؤون العربية والدولية والشأن الفلسطيني وأخبار الاقتصاد والرياضة والثقافة والفن والعلوم.">
+    <meta name="keywords" content="صحيفة الكترونية مهتمة بالشأن الفلسطيني والعربي ، تضم عدة أقسام متنوعة تتناول الشؤون العربية والدولية والشأن الفلسطيني وأخبار الاقتصاد والرياضة والثقافة والفن والعلوم.">
 
-  </div>
-</div>
-    
-<div data-toggle="lists" data-options="{&quot;valueNames&quot;: [&quot;name&quot;]}">
-    <div class="container-fluid" data-toggle="lists" data-options="{&quot;valueNames&quot;: [&quot;name&quot;], &quot;listClass&quot;: &quot;listAlias&quot;}">
-      <div class="row mb-4" >
-        <div class="col">
 
-          <!-- Form -->
-          <form>
-            <div class="input-group input-group-lg input-group-merge">
+    <!-- Favicons -->
+    <link href="{{asset('land/img/favicon.png')}}" rel="icon">
+    <link href="{{asset('land/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
-              <!-- Input -->
-              <input type="text" class="form-control form-control-prepended search" placeholder="Search">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="{{asset('land/vendor/bootstrap/css/bootstrap-rtl.min.css')}}" rel="stylesheet">
 
-              <!-- Prepend -->
-              <div class="input-group-prepend" >
-                <div class="input-group-text">
-                  <span class="fe fe-search"></span>
+    <link href="{{asset('land/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('land/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
+    <link href="{{asset('land/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+    <link href="{{asset('land/vendor/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{asset('land/vendor/venobox/venobox.css')}}" rel="stylesheet">
+    <link href="{{asset('land/vendor/aos/aos.css')}}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{{asset('land/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('land/css/rtl.css')}}" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
+                    <div>
+                        <h1> ارزاق : يساعد لتوفير المزيد من فرص العمل الجيدة للشباب</h1>
+                        <h2>
+                            يواجه الشباب الذين يدخلون سوق العمل في الوقت الراهن مهمة شاقة لإيجاد فرص عمل لائق دائمة. فمعدلات البطالة ترتفع باستمرار في ظل ازدياد فرص العمل المؤقت وغير المنظم وغيرها من أشكال العمل غير الثابت. . </h2>
+                        <a href="#" class="download-btn"><i class="bx bxs-like bx-tada"></i> صفحة الاخبار </a>
+                        <a href="#" class="download-btn"><i class="bx  bxs-heart bx-tada"></i> التسجيل</a>
+                    </div>
                 </div>
-              </div>
+                <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img" data-aos="fade-up">
+                    <img src="{{asset('land/img/hero-img.png')}}" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= App Features Section ======= -->
+        <section id="features" class="features">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>هدفنا في ارزاق </h2>
+                    <p>محاولة تغيير هذا الوضع؟ عبر عرض اخر الفرص المتوفرة للعمل في قطاعة غزة والاعلان عنها ,ومحاولة ايصال هذا الاعالن عبر شتى طرق التواصل الاجتماعي , لذلك جائت هذه المبادرة الشبابية لتسليط الضوء على معانة الشابب في غزة </p>
+                </div>
+
+                <div class="row no-gutters">
+                    <div class="col-xl-7 d-flex align-items-stretch order-2 order-lg-1">
+                        <div class="content d-flex flex-column justify-content-center">
+                            <div class="row">
+                                <div class="col-md-6 icon-box" data-aos="fade-up">
+                                    <i class="bx bx-receipt"></i>
+                                    <h4> رؤيتنا </h4>
+                                    <p>نسعى من خلال موقعنا الإلكتروني على مساعدة الشباب العاطل عن العمل في الاسواق الفلسطينية لاتاحة الفرصة لهم للوصول الى اخر الفرص والاعمال لتسهيل حياتهم منتجاتهم</p>
+                                </div>
+                                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                                    <i class="bx bx-cube-alt"></i>
+                                    <h4>من نحن </h4>
+                                    <p>موقع ارزاق ماهو الا مبادرة شبابية من والى الشباب تحاول تخفيف وطئ البطالة على الشباب</p>
+                                </div>
+                                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                                    <i class="bx bx-images"></i>
+                                    <h4>محتوى الموقع </h4>
+                                    <p>المحتوى المرئي للموقع بسيط ويسهل التعامل معه</p>
+                                </div>
+                                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                                    <i class="bx bx-shield"></i>
+                                    <h4>خصوصية البيانات والامان </h4>
+                                    <p>كلّ المعلومات الشخصية التي تضعها في الموقع عبر التسجيل به للاستفادة من خدماته</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image col-xl-5 d-flex align-items-stretch justify-content-center order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+                        <img src="{{asset('land/img/features.svg')}}" class="img-fluid" alt="">
+                    </div>
+                </div>
 
             </div>
-          </form>
+        </section>
+        <!-- End App Features Section -->
 
-        </div>
-        <div class="col-auto" dir="ltr">
+        <!-- ======= Details Section ======= -->
+        <section id="details" class="details">
+            <div class="container">
 
-          <!-- Navigation (button group) -->
-          <div class="nav btn-group" role="tablist">
-            <button class="btn btn-lg btn-white active" data-toggle="tab" data-target="#tabPaneOne" role="tab" aria-controls="tabPaneOne" aria-selected="true">
-              <span class="fe fe-grid"></span>
-            </button>
-            <button class="btn btn-lg btn-white" data-toggle="tab" data-target="#tabPaneTwo" role="tab" aria-controls="tabPaneTwo" aria-selected="false">
-              <span class="fe fe-list"></span>
-            </button>
-          </div> <!-- / .nav -->
-
-        </div>
-      </div> <!-- / .row -->
-
-      <!-- Tab content -->
-      <div class="tab-content">
-        <div class="tab-pane fade active show" id="tabPaneOne" role="tabpanel">
-          <div class="row listAlias"><div class="col-12 col-md-6 col-xl-4">
-
-              <!-- Card -->
-              <div class="card">
-
-                <!-- Image -->
-                <a href="project-overview.html">
-                  <img src="{{asset('site/assets/img/avatars/projects/project-1.jpg')}}" alt="..." class="card-img-top">
-                </a>
-
-                <!-- Body -->
-                <div class="card-body">
-                  <div class="row align-items-center">
-                    <div class="col">
-
-                      <!-- Title -->
-                      <h4 class="mb-2 name">
-                        <a href="project-overview.html">Homepage Redesign</a>
-                      </h4>
-
-                      <!-- Subtitle -->
-                      <p class="card-text small text-muted">
-                        Updated 4hr ago
-                      </p>
-
+                <div class="row content">
+                    <div class="col-md-4" data-aos="fade-right">
+                        <img src="{{asset('land/img/details-1.png')}}" class="img-fluid" alt="">
                     </div>
-                    <div class="col-auto">
 
-  <!-- Avatar group -->
-  <div class="avatar-group">
-    <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="" data-original-title="Ab Hadley">
-      <img src="{{asset('site/assets/img/avatars/profiles/avatar-2.jpg')}}" alt="..." class="avatar-img rounded-circle">
-    </a>
-    <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="" data-original-title="Adolfo Hess">
-      <img src="{{asset('site/assets/img/avatars/profiles/avatar-3.jpg')}}" alt="..." class="avatar-img rounded-circle">
-    </a>
-    <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="" data-original-title="Daniela Dewitt">
-      <img src="{{asset('site/assets/img/avatars/profiles/avatar-4.jpg')}}" alt="..." class="avatar-img rounded-circle">
-    </a>
-    <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="" data-original-title="Miyah Myles">
-      <img src="{{asset('site/assets/img/avatars/profiles/avatar-5.jpg')}}" alt="..." class="avatar-img rounded-circle">
-    </a>
-  </div>                     
+                    <div class="col-md-8 pt-4" data-aos="fade-up">
+                        <h3>نحن نضمن لك السهولة في التصفح والمرونة مع واجهة مستخدم عالية الاستجابة ومتوافقة مع متصفحات الانترنت</h3>
+                        <p class="font-italic">
+                            المؤثرون أصدقاؤنا </p>
+
+                        <p>
+
+
+                            أصبح عالمنا الإلكتروني قائم على معرفة من هم المتذوّقون الأساسيّون والأكثر متابعة مــــن الجماهير فأصبح واجبنا أن نربط علاقات ودّ بيننا وبينهم لأجلكم. </p>
                     </div>
-                  </div> <!-- / .row -->
                 </div>
 
-                <!-- Footer -->
-                <div class="card-footer card-footer-boxed">
-                  <div class="row align-items-center">
-                    <div class="col">
-                      <div class="row align-items-center no-gutters">
-                        <div class="col-auto">
-
-                          <!-- Value -->
-                          <div class="small mr-2">29%</div>
-
-                        </div>
-                        <div class="col">
-
-                          <!-- Progress -->
-                          <div class="progress progress-sm">
-                            <div class="progress-bar" role="progressbar" style="width: 29%" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-
-                        </div>
-                      </div> <!-- / .row -->
+                <div class="row content">
+                    <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
+                        <img src="{{asset('land/img/details-2.png')}}" class="img-fluid" alt="">
                     </div>
-                    <div class="col-auto">
+                    <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
+                        <h3>هل انت مستعد للاطلاع على اخر الفرص والاعمال؟</h3>
+                        <p class="font-italic">
+                            الأمر سريع ومتقن جيدًا! </p>
+                        <p>
+                            منهجيّة عملنا
 
-                    
+                        </p>
+                        <p>
+                            المشاركة الاجتماعية 92٪ من المستهلكين يوثقو في توصية من صديق و 70٪ يثقون في توصية من شخص غريب </p>
+                        <ul>
+                            <li><i class="icofont-check"></i> البحث في المشروع</li>
+                            <li><i class="icofont-check"></i> البحث عن الافكار</li>
+                            <li><i class="icofont-check"></i> الوصول للهف</li>
+                        </ul>
 
                     </div>
-                  </div> <!-- / .row -->
                 </div>
-              </div>
+
+                <div class="row content">
+                    <div class="col-md-4" data-aos="fade-right">
+                        <img src="{{asset('land/img/details-3.png')}}" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-8 pt-5" data-aos="fade-up">
+                        <h3> أنظمة الدعم الاجتماعي للفقراء في الأراضي الفلسطينية </h3>
+                        <p>
+                            توجد في الأراضي الفلسطينية مجموعة من المؤسسات التي توفر الدعم الاجتماعي الرسمي وغير الرسمي للفقراء، ويتمثل الدعم الرسمي في ثلاث مؤسسات رئيسة، هي: وزارة الشؤون الاجتماعية، وكالة غوث وتشغيل اللاجئين الفلسطينيين "الأونروا"، ولجان الزكاة. أما الدعم الاجتماعي
+                            غير الرسمي، فيتمثل في بعض الجمعيات الخيرية الأهلية والمؤسسات غير الحكومية، وتتباين هذه الجهات، من حيث الفئات المستهدفة ببرامجها، ومن حيث طبيعة وحجم المساعدة التي تقدمها.
+                            <h3>- المساعدات المقدمة من وزارة الشؤون الاجتماعية:</h3>
+                            <p>تختلف المساعدات المقدمة من وزارة الشؤون الاجتماعية؛ فهناك أسر تتلقى مساعدات نقدية وتموينية، إضافة إلى التأمين الصحي. لقد أظهرت السجلات الرسمية لوزارة الشؤون الاجتماعية تزايداً في أعداد متلقي المساعدات منها في الضفة الغربية
+                                وقطاع غزة</p>
+                    </div>
+                </div>
+
+                <div class="row content">
+                    <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
+                        <img src="{{asset('land/img/details-4.png')}}" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
+                        <h3> المساعدات المقدمة من لجان الزكاة:</h3>
+                        <p class="font-italic">
+                            يغلب على مساعدات لجان الزكاة الطابع المالي، وخصوصاً الأسر المسجلة لديها كحالات تستدعى المساعدة، كما تقدم هذه اللجان مساعدات عينية غير منتظمة تشمل هذه الأسر، بالإضافة لأسر أخرى تعتبر اللجان أن حاجتها للمساعدة تقل عن حاجة الأسر المسجلة لديها كحالات مستفيدة
+                            من مساعداتها الدورية. كما تقدم لجان الزكاة مساعدات خدمية للأسر المسجلة لديها، إضافة إلى تقديم بعض الخدمات بأسعار أقل من سعر السوق للأسر والأفراد الذين يستخدمون المرافق التابعة للجان الزكاة، كالمستشفيات والعيادات الصحية، والمدارس،
+                            ورياض الأطفال. </p>
+
+                    </div>
+                </div>
 
             </div>
-            
-          
-          </div> <!-- / .row -->
+        </section>
+        <!-- End Details Section -->
+
+
+
+
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+        <div class="footer-newsletter" data-aos="fade-up">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h4>القائمة البريدية
+                        </h4>
+                        <p>سجل في القائمة البريدية كي تحصل على كل جديد </p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="اشتراك">
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="tab-pane fade" id="tabPaneTwo" role="tabpanel">
-          <div class="row list">
-            <div class="col-12">
 
-              <div class="card">
-                <div class="card-body">
-                  <div class="row align-items-center">
-                    <div class="col-auto">
 
-                      <!-- Avatar -->
-                      <a href="project-overview.html" class="avatar avatar-lg avatar-4by3">
-                        <img src="{{asset('site/assets/img/avatars/projects/project-1.jpg')}}" alt="..." class="avatar-img rounded">
-                      </a>
+        <div class="container py-4">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Arzaaq</span></strong>. All Rights Reserved
+            </div>
 
-                    </div>
-                    <div class="col ml-n2">
-
-                      <!-- Title -->
-                      <h4 class="mb-1 name">
-                        <a href="project-overview.html">Homepage Redesign</a>
-                      </h4>
-
-                      <!-- Text -->
-                      <p class="card-text small text-muted mb-1">
-                        <time datetime="2018-06-21">Updated 2hr ago</time>
-                      </p>
-
-                      <!-- Progress -->
-                      <div class="row align-items-center no-gutters">
-                        <div class="col-auto">
-
-                          <!-- Value -->
-                          <div class="small mr-2">29%</div>
-
-                        </div>
-                        <div class="col">
-
-                          <!-- Progress -->
-                          <div class="progress progress-sm">
-                            <div class="progress-bar" role="progressbar" style="width: 29%" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-
-                        </div>
-                      </div> <!-- / .row -->
-
-                    </div>
-                    <div class="col-auto">
-
-                      <!-- Avatar group -->
-                      <div class="avatar-group d-none d-md-inline-flex">
-                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="" data-original-title="Ab Hadley">
-                          <img src="{{asset('site/assets/img/avatars/profiles/avatar-2.jpg')}}" class="avatar-img rounded-circle" alt="...">
-                        </a>
-                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="" data-original-title="Adolfo Hess">
-                          <img src="{{asset('site/assets/img/avatars/profiles/avatar-3.jpg')}}" class="avatar-img rounded-circle" alt="...">
-                        </a>
-                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="" data-original-title="Daniela Dewitt">
-                          <img src="{{asset('site/assets/img/avatars/profiles/avatar-4.jpg')}}" class="avatar-img rounded-circle" alt="...">
-                        </a>
-                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="" data-original-title="Miyah Myles">
-                          <img src="{{asset('site/assets/img/avatars/profiles/avatar-5.jpg')}}" class="avatar-img rounded-circle" alt="...">
-                        </a>
-                      </div>
-
-                    </div>
-                    <div class="col-auto">
-
-                      <!-- Dropdown -->
-                     
-
-                    </div>
-                  </div> <!-- / .row -->
-                </div> <!-- / .card-body -->
-              </div>
-
-            </div></div> <!-- / .row -->
         </div>
-      </div> <!-- / .tab-content -->
+    </footer>
+    <!-- End Footer -->
 
-    </div>
-  </div>
-  @endsection
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{{asset('land/vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('land/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('land/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
+    <script src="{{asset('land/vendor/php-email-form/validate.js')}}"></script>
+    <script src="{{asset('land/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('land/vendor/venobox/venobox.min.js')}}"></script>
+    <script src="{{asset('land/vendor/aos/aos.js')}}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{{asset('land/js/main.js')}}"></script>
+
+</body>
+
+</html>

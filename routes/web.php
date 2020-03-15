@@ -12,11 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('site.index');
 });
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
-Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('posts','PostController');
+Route::resource('posts','PostController')->only([
+    'index', 'show'
+]);

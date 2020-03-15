@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Post;
 use Intervention\Image\Facades\Image;
-
+use Illuminate\Support\Facades\Storage;
 class PostController extends Controller
 {
     /**
@@ -44,10 +44,11 @@ class PostController extends Controller
     public function store(Request $request)
     {
         
-        dd($request->all());
         $request->validate([
             'title' => 'required',
             'body' => 'required',
+            'category_id' => 'required'
+
         ]);
         $request_data = $request->except('image');
 
@@ -56,11 +57,10 @@ class PostController extends Controller
 
             $request_data['image'] = $request->image->hashName();
         } 
-
-      Post::create($request_data);
-      return "sadjjaksd";
-        // session()->flash('success', __('site.added_successfully'));
-        // return redirect()->route('dashboard.post.create');
+      // dd($request_data);
+        Post::Create($request_data);
+         session()->flash('success', __('site.added_successfully'));
+         return redirect()->route('dashboard.posts.create');
     }
 
     /**
@@ -77,12 +77,11 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Post $post)
     {
         //
+        return view('dashboard.posts.edit',compact('post'));
     }
 
     /**
@@ -92,9 +91,27 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Post $post)
     {
         //
+        
+        if ($request->image) {
+
+            if ($post->image != 'default.png') {
+
+                Storage::disk('public_uploads')->delete('/post_images/' . $post->image);
+                    
+            }//end of if
+
+            Image::make($request->image)->save(public_path('uploads/post_images/' . $request->image->hashName()));
+
+            $request_data['image'] = $request->image->hashName();
+
+        }//end of if
+        
+        $post->update($request_data);
+        session()->flash('success', __('site.updated_successfully'));
+        return redirect()->route('dashboard.posts.index');
     }
 
     /**
@@ -103,8 +120,17 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Post $post)
     {
         //
+        if ($post->image != 'default.png') {
+
+            Storage::disk('public_uploads')->delete('/post_images/' . $post->image);
+
+        }//end of if
+
+        $post->delete();
+        session()->flash('success', __('site.deleted_successfully'));
+        return redirect()->route('dashboard.posts.index');
     }
 }

@@ -46,7 +46,7 @@
                         <h1> ارزاق : يساعد لتوفير المزيد من فرص العمل الجيدة للشباب</h1>
                         <h2>
                             يواجه الشباب الذين يدخلون سوق العمل في الوقت الراهن مهمة شاقة لإيجاد فرص عمل لائق دائمة. فمعدلات البطالة ترتفع باستمرار في ظل ازدياد فرص العمل المؤقت وغير المنظم وغيرها من أشكال العمل غير الثابت. . </h2>
-                        <a href="#" class="download-btn"><i class="bx bxs-like bx-tada"></i> صفحة الاخبار </a>
+                        <a href="{{route('posts.index')}}" class="download-btn"><i class="bx bxs-like bx-tada"></i> صفحة الاخبار </a>
                         <a href="#" class="download-btn"><i class="bx  bxs-heart bx-tada"></i> التسجيل</a>
                     </div>
                 </div>

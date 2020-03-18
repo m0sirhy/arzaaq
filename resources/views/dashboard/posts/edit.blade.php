@@ -11,13 +11,12 @@
 
             <!-- Pretitle -->
             <h6 class="header-pretitle">
-              New Post
+        تعديل المقال
             </h6>
 
             <!-- Title -->
             <h1 class="header-title">
-              Create a new Post
-            </h1>
+تعديل            </h1>
 
           </div>
         </div> <!-- / .row -->
@@ -25,19 +24,20 @@
     </div>
 
     <!-- Form -->
-    <form class="mb-4" method="POST" action="{{route('dashboard.posts.update')}}" enctype="multipart/form-data">
+    <form class="mb-4" method="POST" action="{{route('dashboard.posts.update',$post->id)}}" enctype="multipart/form-data">
       @csrf
-      @put
+      @method('PUT')
+
       <!-- Project name -->
       <div class="form-group">
 
         <!-- Label  -->
         <label>
-          Post title
-        </label>
+@lang('site.title')       
+ </label>
 
         <!-- Input -->
-        <input type="text" name="title" class="form-control">
+      <input type="text" name="title" class="form-control" value="{{$post->title}}">
 
       </div>
 
@@ -46,8 +46,7 @@
 
         <!-- Label -->
         <label class="mb-1">
-          Project description
-        </label>
+@lang('site.body')        </label>
 
         <!-- Text -->
         <small class="form-text text-muted">
@@ -56,8 +55,8 @@
 
           <!-- Textarea -->
           <textarea name="body" id="editor1" rows="10" cols="80">
-                This is my textarea to be replaced with CKEditor.
-            </textarea>
+{!!$post->body!!}
+          </textarea>
         
       </div>
 
@@ -69,13 +68,11 @@
 
         <!-- Label -->
         <label>
-          Post Category
-        </label>
+@lang('site.category')        </label>
         <select name="category_id" class="form-control">
                                 <option value="">@lang('site.all_categories')</option>
                                 @foreach ($categories as $category)
-                                    <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
-                                @endforeach
+                                <option value="{{ $category->id }}" {{ $post->category_id == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>                                @endforeach
                             </select>
 
       </div>
@@ -90,7 +87,7 @@
 
         <!-- Label  -->
         <label class="mb-1">
-          Project cover
+          @lang('site.image')  
         </label>
 
         <!-- Text -->
@@ -101,16 +98,14 @@
 
 
         <!-- Fallback -->
-        <div class="fallback">
-          <div class="custom-file">
-            <input type="file" name="image" class="file-input">
-            <label class="file-label">Choose file</label>
-          </div>
-        </div>
-
         <div class="form-group">
-                            <img src="{{ asset('uploads/product_images/default.png') }}" style="width: 100px" class="img-thumbnail image-preview" alt="">
-                        </div>
+          <label>@lang('site.image')</label>
+          <input type="file" name="image" class="form-control image">
+      </div>
+
+      <div class="form-group">
+          <img src="{{ $post->image_path }}" style="width: 100px" class="img-thumbnail image-preview" alt="">
+      </div>
 
 
       </div>
@@ -123,7 +118,7 @@
   <!-- Buttons -->
   <input type="submit" class="btn btn-block btn-primary" value=" Create project ">
   <a href="#" class="btn btn-block btn-link text-muted">
-    Cancel this project
+@lang('site.edit')
   </a>
 
   </form>

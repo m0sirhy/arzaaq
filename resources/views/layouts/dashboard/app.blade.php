@@ -21,7 +21,8 @@
     
   <link rel="stylesheet" href="{{ asset('site/assets/css/theme.min.css')}}" id="stylesheetLight">
   <link rel="stylesheet" href="{{ asset('site/assets/css/theme-dark.min.css')}}" id="stylesheetDark">
-
+  <link href="{{asset('land/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
+  <link href="{{asset('land/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
   <style>
     body {
       display: none;
@@ -30,16 +31,25 @@
   </style>
   
   <!-- Title -->
-  <title>Dashkit</title>
+  <title>ارزاق -موقع الوظائف الاول </title>
 
 
 
   </head>
-  <body>
+  <body style="font-family: 'Cairo';">
     
             <div class="container">
               <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light">
                 <div class="container-fluid">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a href="{{route('dashboard.posts.index')}}" class="nav-link active">
+                        <i class="fe fe-home"></i>
+                       كل المقالات
+
+                      </a>
+                    </li>
+                  </ul>
                 </div>
                 </nav>
  <div class="main-content">

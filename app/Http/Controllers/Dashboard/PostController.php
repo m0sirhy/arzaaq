@@ -18,7 +18,8 @@ class PostController extends Controller
     public function index()
     {
         //
-        return view('dashboard.posts.index');
+        $posts=Post::latest()->paginate(5);
+        return view('dashboard.index',compact('posts'));
 
     }
 
@@ -69,9 +70,11 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Post $post)
     {
         //
+        return view('dashboard.posts.show',compact('post'));
+
     }
 
     /**
@@ -81,7 +84,9 @@ class PostController extends Controller
     public function edit(Post $post)
     {
         //
-        return view('dashboard.posts.edit',compact('post'));
+        $categories=Category::get();
+
+        return view('dashboard.posts.edit',compact('post','categories'));
     }
 
     /**

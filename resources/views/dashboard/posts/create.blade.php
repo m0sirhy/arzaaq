@@ -11,13 +11,12 @@
 
             <!-- Pretitle -->
             <h6 class="header-pretitle">
-              New Post
+            مقال جديد
             </h6>
 
             <!-- Title -->
             <h1 class="header-title">
-              Create a new Post
-            </h1>
+انشاء مقال جديد            </h1>
 
           </div>
         </div> <!-- / .row -->
@@ -32,11 +31,11 @@
 
         <!-- Label  -->
         <label>
-          Post title
+         @lang('site.title')
         </label>
 
         <!-- Input -->
-        <input type="text" name="title" class="form-control">
+        <input type="text" name="title" class="form-control" value="{{old('title')}}>
 
       </div>
 
@@ -45,8 +44,7 @@
 
         <!-- Label -->
         <label class="mb-1">
-          Project description
-        </label>
+@lang('site.body')        </label>
 
         <!-- Text -->
         <small class="form-text text-muted">
@@ -54,8 +52,8 @@
         </small>
 
           <!-- Textarea -->
-          <textarea name="body" id="editor1" rows="10" cols="80">
-                This is my textarea to be replaced with CKEditor.
+      <textarea name="body" id="editor1" rows="10" cols="80" value="{{old('body')}}">
+               اضف نص المقال هنا...
             </textarea>
         
       </div>
@@ -68,8 +66,7 @@
 
         <!-- Label -->
         <label>
-          Post Category
-        </label>
+@lang('site.category')        </label>
         <select name="category_id" class="form-control">
                                 <option value="">@lang('site.all_categories')</option>
                                 @foreach ($categories as $category)
@@ -89,8 +86,7 @@
 
         <!-- Label  -->
         <label class="mb-1">
-          Project cover
-        </label>
+@lang('site.image')        </label>
 
         <!-- Text -->
         <small class="form-text text-muted">
@@ -120,10 +116,9 @@
  
 
   <!-- Buttons -->
-  <input type="submit" class="btn btn-block btn-primary" value=" Create project ">
+  <input type="submit" class="btn btn-block btn-primary" value=" @lang('site.create')">
   <a href="#" class="btn btn-block btn-link text-muted">
-    Cancel this project
-  </a>
+@lang('site.cancel')  </a>
 
   </form>
 

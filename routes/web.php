@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('site.index');
-});
+})->name('home');
 
 Auth::routes(['register' => false]);
 

@@ -1,19 +1,26 @@
 @extends('layouts.site.app')
 @section('content')
 {{-- Header --}}
+<br>
+<div class="float-left">
+<a href="{{route('home')}}" class="btn"><i class="fe fe-airplay"></i> الرئيسية  </a>
 
+</div>
 <div class="header mt-md-5">
   <div class="header-body">
-
+  
     <!-- Pretitle -->
     <h6 class="header-pretitle">
-      Our Platform
+موقع الوظائف والفرص الشبابي الاول 
     </h6>
 
     <!-- Title -->
-    <h1 class="header-title">
-      Platform Feed
-    </h1>
+    <h1 class="header-title" style="font-family: 'Cairo';   ">
+
+<b>        أرزاق
+</b>      </h1>
+  
+
 
   </div>
 </div>

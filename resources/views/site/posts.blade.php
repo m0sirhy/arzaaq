@@ -123,24 +123,39 @@
                       <div class="row align-items-center no-gutters">
                         <div class="col-auto">
 
-                          <!-- Value -->
-                          <div class="small mr-2">29%</div>
+                         
+        
+                            <!-- Reaction -->
+                            <a href="#!" class="btn btn-outline-secondary btn-white">
+                              😬 1
+                            </a>
+                            <a href="#!" class="btn btn-outline-success  btn-white">
+                              👍 2
+                            </a>
+                        
 
                         </div>
                         <div class="col">
 
-                          <!-- Progress -->
-                          <div class="progress progress-sm">
-                            <div class="progress-bar" role="progressbar" style="width: 29%" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
+                       
 
                         </div>
                       </div> <!-- / .row -->
                     </div>
                     <div class="col-auto">
+                     
+                      <div class="col">
 
+                        <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                          <a class="a2a_button_whatsapp"> </a>
+                          <a class="a2a_button_facebook_messenger"></a>
 
+                          <a class="a2a_button_facebook"></a>
 
+                          
+                          </div>                        
+                      </div>
+  
                     </div>
                   </div> <!-- / .row -->
                 </div>
@@ -239,4 +254,5 @@
 
   </div>
 </div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
 @endsection

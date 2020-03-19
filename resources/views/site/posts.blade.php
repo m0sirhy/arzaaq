@@ -93,10 +93,12 @@
                                             <p class="card-text small text-muted">
                                                 {{$post->created_at->diffForHumans() }}
                                             </p>
-
+                     
                                         </div>
                                         <div class="col-auto">
-
+                                        <!-- <a href="#!" class="btn btn-sm btn-white">
+                        🎉 {{$post->views}}
+                      </a> -->
                                             <!-- Avatar group -->
                                             <div class="avatar-group">
                                                 <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="" data-original-title="Ab Hadley">
@@ -123,32 +125,23 @@
                                           <div class="col-auto">
                                               <div class="col">
                                             <!-- Reaction -->
-                                             <a href="#!" class="btn  btn-sm btn-outline-secondary btn-white">    😬 1       </a>
+                                             <a href="#!" class="btn  btn-sm btn-outline-secondary btn-white">      👍 2     </a>
 
                                              <a href="#!" class="btn  btn-sm btn-outline-success  btn-white">
-                                           👍 2
+                                             👎 2
                                          </a>
                                               </div>
                                       
                                                                 <!-- / .row -->
                                         </div>
-                                        <div class="row align-items-center">
-                                        <div class="col-auto">
+                                        <div class="col float-lg-left ">
 
-                                            <div class="col">
+                                            <div class="col ">
 
-                                                <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-                                                    <a class="a2a_button_whatsapp"> </a>
-                                                    <a class="a2a_button_facebook_messenger"></a>
-
-                                                    <a class="a2a_button_facebook"></a>
-
-
-                                                </div>
+                          
                                             </div>
 
                                         </div>
-                                    </div>
                                     </div>
                                     <!-- / .row -->
                                 </div>

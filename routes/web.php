@@ -21,3 +21,4 @@ Auth::routes(['register' => false]);
 Route::resource('posts','PostController')->only([
     'index', 'show'
 ]);
+Route::post('/reaction','ReactionController@up');

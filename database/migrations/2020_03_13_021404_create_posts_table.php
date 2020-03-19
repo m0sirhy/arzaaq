@@ -18,6 +18,7 @@ class CreatePostsTable extends Migration
             $table->integer('category_id');
             $table->string('title')->nullable();
             $table->text('body')->nullable();
+            $table->integer('views')->default(200);
             $table->string('image');
             $table->timestamps();
         });

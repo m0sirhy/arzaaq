@@ -1,7 +1,7 @@
 @extends('layouts.site.app') @section('content') {{-- Header --}}
 <br>
 <div class="float-left">
-    <a href="/posts" class="btn btn-primary "> <i class="fe fe-home"></i> عودة للرئيسية </a>
+    <a href="/posts" class="btn btn-sm btn-primary "> <i class="fe fe-home"></i> عودة للرئيسية </a>
 
 </div>
 <div class="header mt-md-5">
@@ -79,12 +79,10 @@
                 <div class="col">
 
                     <!-- Reaction -->
-                    <a href="#!" class="btn btn-outline-secondary btn-white">
+                    <a href="#!" class="btn btn-outline-secondary  btn-sm btn-white">
                       👍 2
           </a>
-                    <a href="#!" class="btn btn-outline-success  btn-white">
-                      👎 2
-                    </a>
+                    
 
                 </div>
                 <br>

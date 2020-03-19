@@ -50,6 +50,9 @@ class PostController extends Controller
     public function show(Post $post)
     {
         //
+        $post->increment('views');
+        $post->save();
+        
         return view('site.post',compact('post'));
     }
 

@@ -3,12 +3,15 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Overtrue\LaravelFollow\Traits\CanBeVoted;
 
-class Post extends Model
+class Post extends Model 
 {
+    use  CanBeVoted;
+
     //
     protected $fillable = [
-        'title', 'body', 'image','category_id'
+        'title', 'body', 'views','image','category_id'
     ];
     public function category(){
         return $this->belongsTo(Category::class);

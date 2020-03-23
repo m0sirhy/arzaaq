@@ -16,7 +16,7 @@
 
             <!-- Title -->
             <h1 class="header-title">
-              Create a new Post
+           اضافة تصنيف جديد
             </h1>
 
           </div>
@@ -48,7 +48,7 @@
 
   <!-- Label  -->
   <label class="mb-1">
-    Project cover
+    اضافة صورة
   </label>
 
   <!-- Text -->
@@ -83,7 +83,7 @@
 <!-- Buttons -->
 <input type="submit" class="btn btn-block btn-primary" value=" Create project ">
 <a href="#" class="btn btn-block btn-link text-muted">
-Cancel this project
+@lang('site.add')
 </a>
 
 </form>

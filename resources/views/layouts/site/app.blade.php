@@ -1,39 +1,50 @@
+
   <!DOCTYPE html>
   <html dir="rtl" lang="ar">
 
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc." />
-    <script src="{{ asset('site/assets/js/client.min.js')}}"></script>
 
-    <!-- //meta Robots -->
   <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+    @if (\Request::is('posts'))
 
-<!-- //canonical tag :A page can have several different URLs depending -->
-<link rel="canonical" href="" />
-
-
+ 
+    <meta property="og:title" content="أرزاق موقع الوظائف والفرص الاول " />
+    <meta name="description"  content="صحيفة الكترونية مهتمة بالشأن الفلسطيني والعربي ، تضم عدة أقسام متنوعة تتناول الشؤون العربية والدولية والشأن الفلسطيني وأخبار الاقتصاد والرياضة والثقافة والفن والعلوم." />
+    <meta property="og:site_name" content="أرزاق موقع الوظائف والفرص الاول " />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="arzaaq.rf.gd" />
+    <meta property="og:image" content="{{asset('land/img/favicon.png')}}" />
+    <meta property="og:description" 
+    content="صحيفة الكترونية مهتمة بالشأن الفلسطيني والعربي ، تضم عدة أقسام متنوعة تتناول الشؤون العربية والدولية والشأن الفلسطيني وأخبار الاقتصاد والرياضة والثقافة والفن والعلوم." />
+    <!-- //twitter card -->
+     <meta name=”twitter:card” content=”summary_large_image”>
+     <meta name=”twitter:url” content=”arzaaq.rf.gd “>
+    <meta name=”twitter:title” content=”أرزاق موقع الوظائف والفرص الاول ”>
+     <meta name=”twitter:description” content="صحيفة الكترونية مهتمة بالشأن الفلسطيني والعربي ، تضم عدة أقسام متنوعة تتناول الشؤون العربية والدولية والشأن الفلسطيني وأخبار الاقتصاد والرياضة والثقافة والفن والعلوم." />
+     <meta name=”twitter:image” content="{{asset('land/img/favicon.png')}}">
+    
+     @else
+  <meta property="og:title" content="{{$post->title}} " />
+  <meta name="description"  content="{{$post->title}}  " />
+  <meta property="og:site_name" content="أرزاق موقع الوظائف والفرص الاول " />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="arzaaq.rf.gd" />
+<meta property="og:image" content="{{$post->image_path}}" />
+  <meta property="og:description" 
+  content=" {{$post->title}} " />
+  <!-- //twitter card -->
+   <meta name=”twitter:card” content=”summary_large_image”>
+   <meta name=”twitter:url” content=”arzaaq.rf.gd “>
+  <meta name=”twitter:title” content="{{$post->title}} ">
+   <meta name=”twitter:description” content="{{$post->meta}} " />
+   <meta name=”twitter:image” content="{{asset('land/img/favicon.png')}}">
 <!-- //og: meta Tags -->
-<meta property="og:title" content="" />
-<meta property="og:site_name" content="" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="" />
-<meta property="og:image" content="" />
-<meta property="og:description" 
-  content="Sean Connery found fame and fortune as the
-           suave, sophisticated British agent, James Bond." />
 
-
-<!-- //twitter card -->
- <meta name=”twitter:card” content=”summary_large_image”>
- <meta name=”twitter:url” content=” “>
-<meta name=”twitter:title” content=” ”>
- <meta name=”twitter:description” content=”
-, the methods that require you to send out emails 
-to thousands of webmasters begging for links. “>
- <meta name=”twitter:image” content=”linkbuilding.jpg”>
-    <!-- Libs CSS -->
+@endif
+ <script src="{{ asset('site/assets/js/client.min.js')}}"></script>
+ <!-- Libs CSS -->
     <link rel="stylesheet" href="{{ asset('site/assets/fonts/feather/feather.css')}}" />
     <link rel="stylesheet" href="{{ asset('site/assets/libs/flatpickr/dist/flatpickr.min.css')}}" />
     <link rel="stylesheet" href="{{ asset('site/assets/libs/quill/dist/quill.core.css')}}" />
@@ -78,15 +89,13 @@ to thousands of webmasters begging for links. “>
     <script src="{{ asset('site/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{ asset('site/assets/libs/%40shopify/draggable/lib/es5/draggable.bundle.legacy.js')}}"></script>
     <script src="{{ asset('site/assets/libs/autosize/dist/autosize.min.js')}}"></script>
-    <script src="{{ asset('site/assets/libs/chart.js/dist/Chart.min.js')}}"></script>
-    <script src="{{ asset('site/assets/libs/dropzone/dist/min/dropzone.min.js')}}"></script>
+ 
     <script src="{{ asset('site/assets/libs/flatpickr/dist/flatpickr.min.js')}}"></script>
     <script src="{{ asset('site/assets/libs/highlightjs/highlight.pack.min.js')}}"></script>
     <script src="{{ asset('site/assets/libs/jquery-mask-plugin/dist/jquery.mask.min.js')}}"></script>
     <script src="{{ asset('site/assets/libs/list.js/dist/list.min.js')}}"></script>
     <script src="{{ asset('site/assets/libs/quill/dist/quill.min.js')}}"></script>
     <script src="{{ asset('site/assets/libs/select2/dist/js/select2.full.min.js')}}"></script>
-    <script src="{{ asset('site/assets/libs/chart.js/Chart.extension.js')}}"></script>
 
     <script type="text/javascript">
       $(document).ready(function() {     

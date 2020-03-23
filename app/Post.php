@@ -11,7 +11,7 @@ class Post extends Model
 
     //
     protected $fillable = [
-        'title', 'body', 'views','image','category_id'
+        'title', 'body', 'views','meta','image','category_id'
     ];
     public function category(){
         return $this->belongsTo(Category::class);

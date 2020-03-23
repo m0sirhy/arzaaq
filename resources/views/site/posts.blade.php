@@ -100,20 +100,7 @@
                         🎉 {{$post->views}}
                       </a> -->
                                             <!-- Avatar group -->
-                                            <div class="avatar-group">
-                                                <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="" data-original-title="Ab Hadley">
-                                                    <img src="{{asset('site/assets/img/avatars/profiles/avatar-2.jpg')}}" alt="..." class="avatar-img rounded-circle">
-                                                </a>
-                                                <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="" data-original-title="Adolfo Hess">
-                                                    <img src="{{asset('site/assets/img/avatars/profiles/avatar-3.jpg')}}" alt="..." class="avatar-img rounded-circle">
-                                                </a>
-                                                <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="" data-original-title="Daniela Dewitt">
-                                                    <img src="{{asset('site/assets/img/avatars/profiles/avatar-4.jpg')}}" alt="..." class="avatar-img rounded-circle">
-                                                </a>
-                                                <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="" data-original-title="Miyah Myles">
-                                                    <img src="{{asset('site/assets/img/avatars/profiles/avatar-5.jpg')}}" alt="..." class="avatar-img rounded-circle">
-                                                </a>
-                                            </div>
+                                        
                                         </div>
                                     </div>
                                     <!-- / .row -->
@@ -125,10 +112,10 @@
                                           <div class="col-auto">
                                               <div class="col">
                                             <!-- Reaction -->
-                                             <a href="#!" class="btn  btn-sm btn-outline-secondary btn-white">      👍 2     </a>
+                                             <a href="#!" class="btn  btn-sm btn-outline-secondary btn-white">      👍     </a>
 
                                              <a href="#!" class="btn  btn-sm btn-outline-success  btn-white">
-                                             👎 2
+                                             👎 
                                          </a>
                                               </div>
                                       
@@ -184,27 +171,10 @@
 
                                             <!-- Text -->
                                             <p class="card-text small text-muted mb-1">
-                                                <time datetime="2018-06-21">{{$post->created_at}}</time>
+                                                <time datetime="2018-06-21">{{$post->created_at->diffForHumans() }}</time>
                                             </p>
 
-                                            <!-- Progress -->
-                                            <div class="row align-items-center no-gutters">
-                                                <div class="col-auto">
-
-                                                    <!-- Value -->
-                                                    <div class="small mr-2">29%</div>
-
-                                                </div>
-                                                <div class="col">
-
-                                                    <!-- Progress -->
-                                                    <div class="progress progress-sm">
-                                                        <div class="progress-bar" role="progressbar" style="width: 29%" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <!-- / .row -->
+                                    
 
                                         </div>
                                         <div class="col-auto">

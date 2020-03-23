@@ -60,7 +60,17 @@
 
       <!-- Divider -->
       <hr class="mt-4 mb-5">
+      <div class="form-group">
 
+        <!-- Label  -->
+        <label>
+         @lang('site.meta')
+        </label>
+
+        <!-- Input -->
+        <input type="text" name="meta" class="form-control" value="{{old('meta')}}">
+
+      </div>
       <!-- Project tags -->
       <div class="form-group">
 

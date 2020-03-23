@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('title')->nullable();
             $table->text('body')->nullable();
             $table->integer('views')->default(200);
+            $table->text('meta')->default("ارزاق موقع الوظائف والفرص الاول");
             $table->string('image');
             $table->timestamps();
         });

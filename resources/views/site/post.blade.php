@@ -51,6 +51,9 @@
                                             {{$post->title}}
                                         </h1>
                                         {{$post->created_at->diffForHumans()}}
+                                        <br>
+                                          <span class="badge badge-primary">     {{$post->views .' '}}🎉
+                                        </span>
 
                                     </div>
 
@@ -80,8 +83,9 @@
 
                     <!-- Reaction -->
                     <a href="#!" class="btn btn-outline-secondary  btn-sm btn-white">
-                      👍 2
+                      👍 
           </a>
+                    
                     
 
                 </div>

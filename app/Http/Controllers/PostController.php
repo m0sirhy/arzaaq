@@ -15,7 +15,7 @@ class PostController extends Controller
     public function index(Request $request)
     {
         //
-        $posts=Post::with('category')->paginate(9);
+        $posts=Post::with('category')->orderBy('created_at', 'desc')->paginate(9);
       
         return view('site.posts',compact('posts'));
     }

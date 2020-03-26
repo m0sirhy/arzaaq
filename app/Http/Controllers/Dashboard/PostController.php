@@ -59,7 +59,9 @@ class PostController extends Controller
             $request_data['image'] = $request->image->hashName();
         } 
       // dd($request_data);
-        Post::Create($request_data);
+       $post= Post::Create($request_data);
+
+
          session()->flash('success', __('site.added_successfully'));
          return redirect()->route('dashboard.posts.create');
     }
@@ -73,6 +75,7 @@ class PostController extends Controller
     public function show(Post $post)
     {
         //
+        
         return view('dashboard.posts.show',compact('post'));
 
     }

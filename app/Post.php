@@ -4,10 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Overtrue\LaravelFollow\Traits\CanBeVoted;
+use Cviebrock\EloquentSluggable\Sluggable;
 
 class Post extends Model 
 {
     use  CanBeVoted;
+	use Sluggable;
 
     //
     protected $fillable = [
@@ -21,6 +23,13 @@ class Post extends Model
     public function getImagePathAttribute(){
         return asset('uploads/post_images/' . $this->image);
     }
-
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
+    }
 
 }

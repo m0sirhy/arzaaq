@@ -17,6 +17,7 @@ class CreatePostsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('category_id');
             $table->string('title')->nullable();
+            $table->string('slug');
             $table->text('body')->nullable();
             $table->integer('views')->default(200);
             $table->text('meta')->default("ارزاق موقع الوظائف والفرص الاول");

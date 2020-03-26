@@ -75,7 +75,7 @@
                             <div class="card">
 
                                 <!-- Image -->
-                                <a href="{{route('posts.show',$post->id)}}">
+                                <a href="{{route('posts.show',$post->slug)}}">
                   <img src="{{$post->image_path}}" alt="..." class="card-img-top">
                 </a>
 
@@ -86,7 +86,7 @@
 
                                             <!-- Title -->
                                             <h4 class="mb-2 name">
-                                                <a href="{{route('posts.show',$post->id)}}">{{$post->title}}</a>
+                                                <a href="{{route('posts.show',$post->slug)}}">{{$post->title}}</a>
                                             </h4>
 
                                             <!-- Subtitle -->
@@ -166,7 +166,7 @@
 
                                             <!-- Title -->
                                             <h4 class="mb-1 name">
-                                                <a href="{{route('posts.show',$post->id)}}">{{$post->title}}</a>
+                                                <a href="{{route('posts.show',$post->slug)}}">{{$post->title}}</a>
                                             </h4>
 
                                             <!-- Text -->

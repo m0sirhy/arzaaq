@@ -6,6 +6,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
+    <script defer src="{{ mix('js/app.js') }}"></script>
+  <link href="{{mix('css/app.css')}}" rel="stylesheet" data-turbolinks-track="true">
+
   <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
     @if (\Request::is('posts'))
 
@@ -44,6 +47,8 @@
 
 @endif
  <script src="{{ asset('site/assets/js/client.min.js')}}"></script>
+ <script src="{{ asset('site/assets/js/pace.js')}}"></script>
+
  <!-- Libs CSS -->
     <link rel="stylesheet" href="{{ asset('site/assets/fonts/feather/feather.css')}}" />
     <link rel="stylesheet" href="{{ asset('site/assets/libs/flatpickr/dist/flatpickr.min.css')}}" />
@@ -56,12 +61,15 @@
 
     <link rel="stylesheet" on="isDay" href="{{ asset('site/assets/css/theme.min.css')}}" id="stylesheetLight">
     <!-- <link rel="stylesheet" href="{{ asset('site/assets/css/theme-dark.min.css')}}" id="stylesheetDark"> -->
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
     <style>
       body {
         display: none;
+        
       }
+ 
     </style>
     <link href="{{asset('land/img/favicon.png')}}" rel="icon">
 
@@ -96,6 +104,13 @@
     <script src="{{ asset('site/assets/libs/list.js/dist/list.min.js')}}"></script>
     <script src="{{ asset('site/assets/libs/quill/dist/quill.min.js')}}"></script>
     <script src="{{ asset('site/assets/libs/select2/dist/js/select2.full.min.js')}}"></script>
+
+<script type="text/javascript">
+$(document).on('turbolinks:load',function() {
+    //infinite_scroll()
+    console.log('turbolinks:load fired');
+});
+</script>
 
     <script type="text/javascript">
       $(document).ready(function() {     
